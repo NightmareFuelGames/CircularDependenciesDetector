@@ -1,7 +1,6 @@
 // Copyright 2022 bstt, Inc. All Rights Reserved.
 
 #include "CircularDependenciesLib.h"
-#include "AssetRegistryModule.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BlueprintEditor.h"
 #include "CircularInvolvedAssetItem.h"
@@ -16,6 +15,8 @@
 #include "Widgets/Notifications/SNotificationList.h"
 #include <Config/CDD_ProjectConfig.h>
 #include "Interfaces/IPluginManager.h"
+#include "Modules/ModuleManager.h"
+#include "AssetRegistry/AssetRegistryModule.h"
 
 void UCircularDependenciesLib::SearchInBlueprint(UObject* Asset, bool bAllBlueprints, FString NewSearchTerms)
 {
